@@ -14,9 +14,9 @@ Group 2: Michael Chan, Kyra Fetter, Dhruv Khatri
 
 ## 1. Introduction<a name="1"></a>
 
-HiGlass, developed in 2018 by the Gehlenborg Lab at Harvard Medical School, is an open source visualization tool for exploring large genomic datasets such as Hi-C contact matrices.<br>
+The past decade has seen unprecedented growth in the number of publically available chromosome conformation capture (3C) datasets (Hi-C, HiChIP, etc.) released, in addition to corresponding 1D genomic datasets produced (ChIP-seq, ATAC-seq, etc.) due to efforts spearheaded by large consortiums like the 4D Nucleome Network and the ENCODE Project, alongside those of individual labs. This explosion in data output has prompted the need for sophisticated, seamless, and accessbile data visualization tools in order to enable researchers to efficiently and effectively compare functional genomics and epigenomics datasets across multiple cell types, treatments, and conditions.<br>
 
-- expand intro
+HiGlass, developed in 2018 by the [HIDIVE Lab](https://hidivelab.org/) at Harvard Medical School, aims to address this need. HiGlass is an open source visualization tool for exploring large genomic datasets such as Hi-C contact matrices, enabling the visual interrogration of chromatin organization at multiple scales including compartments, TADs, and loops, among others, alongisde information from other high-throughput assays examining, for example, chromatin accessibility or transcription factor binding patterns.<br>
 
 > Check out the tool for yourself at https://higlass.io 
 
@@ -34,10 +34,19 @@ HiGlass, developed in 2018 by the Gehlenborg Lab at Harvard Medical School, is a
 - insert figure (higlass google maps comparison)
 
 #### Hi-C Background<a name="22"></a>
-- the need for a tool like higlass arose with the advent of hi-c contact matrices
-- unique problem of huge dataset with interest at many scales / levels
-- review of hi-c assay and output
-- insert figures from slides
+
+Hi-C is a high-throughput chromosome conformation capture (3C) assay developed initially in 2009. An *in situ* Hi-C protocol was introduced in 2014. In brief, Hi-C is performed as follows: cells are first cross-linked with formaldehyde, resulting in covalent links between segments of chromatin that are proximal in 3D space. DNA is then digested with a restriction enzyme. The 5’ ends are filled with nucleotides, one of which is biotinylated. The resulting fragments are ligated. Then, a Hi-C library is created by shearing the DNA and selecting fragments with biotin tags using streptavidin beads. The library is finally sequenced using paired-end sequencing.<br> 
+
+![](hic_protocol.png)
+
+Hi-C can report chromatin interactions between all loci pairwise (all-by-all) and can be used to study both interchromosomal and intrachromosomal interactions which may be structural (define TAD boundaries and often marked by CTCF) or regulatory (connect cis-regulatory elements to their target genes). A common means of examining these interactions in through contact matrices in which the genome is binned (bin sizes ranging from 5kb to 50kb are common) and the contact frequency between any two bins is represented on a color scale. Points of focal enrichment represent chromatin loops, as shown below:<br>
+
+![](hic_contact_matrix.png)
+
+The advent of Hi-C contact matrcies, which can contain over a billion cells and span many resolutions prompted the need to be able to explore these large datasets in a flexible manner at multuple scales. 
+
+
+
 
 #### How HiGlass Works<a name="23"></a>
 - describe downsampling and splicing techniques in blog
@@ -101,6 +110,35 @@ HiGlass, developed in 2018 by the Gehlenborg Lab at Harvard Medical School, is a
 - case study overview
 - figures and steps straight from slides yippee
 
+We will explore a case study based off of the [Schwarzer, W., et al., 2017 Nature paper](https://www.nature.com/articles/nature24281). In this paper, they explored the effect of depleting NIBPL, a cohesin co-factor that is essential in chromatin loop formation through loop extrusion, on 3D genome architecture in adult mouse hepatocytes.<br>
+
+First, begin by navigating to the HiGlass web app homepage:<br>
+
+![](higlass_homepage.png)
+
+We will load two 2D tracks, one for WT and one for NIBPL knockdown, by selecting "Add Track", the center panel, and choosing our files of interest:<br>
+
+![](higlass_add_tracks.png)
+
+This is what the HiGlass visualization should look like after both tracks have been added (WT is on the left and NIBPL knockdown is on the right):<br>
+
+![](higlass_with_tracks.png)
+
+One of the novel features of HiGlass is its abilility to create linked views which means that if a user zooms in/out or drags a track in one view, the track in the other view will shift accordingly as well. We can create a linked view by selecting the settings icon in one of the views and then "Lock zoom and location with" and then choose the other view:<br>
+
+![](higlass_add_linked_view.png)
+
+We can also add additional 1D tracks. For example, let's add a ChIP-seq signal track. To do so, select the plus icon to add a new track, choose the top panel, and select the correct track file from the list:<br>
+
+![](higlass_add_1D_tracks.png)
+
+This is what the views look like one the 1D tracks have been added (green signal track at the top):<br>
+
+![](higlass_with_1D.png)
+
+Just like Google Maps, we can now zoom into a particular region of interest on our contact maps. For example, say we were interested in a 20mb reigion on chr14. We can enter the speciifc coordinates of this region in the search bar for one of the views, seelct the search icon, and then both views will be zoomed into this region (as they are linked). We can see clear differences between the WT and NIBPL knockdown contact matrices: in the NIBPL knockdown, there is a loss of loops and TAD structures, which makes sense as loop extrusion may not be able to occur as effectively without the NIBPL cohension loading factor: <br>
+
+![](higlass_zoomed_in.png)
 
 
 # References
