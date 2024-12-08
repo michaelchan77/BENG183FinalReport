@@ -55,47 +55,71 @@ Interactions are typically represented as a contact matrix, with one axis as the
 
 ![](hic_contact_matrix.png)
 
-## 3. Tracks and Views<a name="3"></a>
-- describe the different applications of higlass possible bc of flexible tracks and views
-- explain integrated/linked view of different types of data
-- 2d and 1d tracks (fill in table below)
-- insert figures of example tracks/applications from higlass examples page
+## 3. Views and Tracks<a name="3"></a>
+HiGlass offers extensive view and track customization to facilitate Hi-C data visualization. Researchers will select the viewing experience which best suits their experimental conditions and data attributes. 
+
+### Views
+Dynamic viewing capabilities allow researchers to easily compare differences between different conditions or examine changes within samples. For example, a researcher may desire to zoom into select regions of the contact matrix and make comparisons. This is feasible through customizing a view which maintains the current state of the heatmap, but also displays the zoomed regions in separate matrices (shown below). This is in contrast with other methods which would require zooming in the same matrix window and screenshotting to make comparisons. Here, we have three zoomed in views showing telomere clustering, while one provides the original view.
+
+Additionally, users may desire to view the same region across multiple conditions simultaneously. Linked views facilitate this by allowing the user to load in multiple datasets and create side-by-side views. As the views are linked, actions performed in one window such as moving to explore the contact map will cause the same movement in the other windows. Below, we explore the difference in structures between six different cancer cell lines.
+
+### Tracks
+There are various 1D and 2D tracks suitable for all input data types listed here:
+
 <table>
  <tbody>
     <tr>
-        <th>Method</td>
-        <th>Targets</td>
-        <th>Resolution</td>
+        <th>Track</td>
+        <th>Description</td>
+        <th>Uses</td>
         <th>Notes</td>
     </tr>
     <tr>
-        <td>3C <a href="http://refhub.elsevier.com/S2001-0370(17)30093-4/rf0535">[3]</a></td>
-        <td>one-vs-one</td>
+        <td>Bed-like (1D)</td>
+        <td>Displays genomic features as horizontal bars or boxes</td>
         <td>~1–10 kb<br></td>
         <td><ul><li>Sequence of bait locus must be known</li><li>Easy data analysis</li><li>Low throughput</li></ul></td>
     </tr>
     <tr>
-    <td>4C <a href="http://refhub.elsevier.com/S2001-0370(17)30093-4/rf0545">[4]</a></td>
-    <td>one-vs-all</td>
+    <td>Gene annotations (1D)</td>
+    <td>Shows gene labels and structures (exons, introns) and annotations along the genome</td>
     <td>~2 kb</td>
     <td><ul><li>Sequence of bait locus must be known</li><li>Detects novel contacts</li><li>Long-range contacts</li></ul></td>
     </tr>
     <tr>
-    <td>5C <a href="http://refhub.elsevier.com/S2001-0370(17)30093-4/rf0550">[5]</a></td>
-    <td>many-vs-many</td>
+    <td>Chromosome labels (1D)</td>
+    <td>Labels chromosomes and corresponding boundaries</td>
     <td>~1 kb</td>
     <td><ul><li>High dynamic range</li><li>Complete contact map of a locus</li><li>3C with ligation-mediated amplification (LMA) of a ‘carbon copy’ library of oligos designed across restriction fragment junctions of interest
 3C</li></ul></td>
     </tr>
     <tr>
-    <td>Hi-C <a href="http://refhub.elsevier.com/S2001-0370(17)30093-4/rf0300">[6]</a></td>
-    <td>all-vs-all</td>
+    <td>Line/Point/Bar (1D)</td>
+    <td>Visualizes numerical data</td>
     <td>0.1–1 Mb</td>
     <td><ul><li>Genome-wide nucleosome core positioning</li><li>Relative low resolution</li><li>High cost</li></ul></td>
     </tr>
     <tr>
-    <td>ChIA-PET <a href="http://refhub.elsevier.com/S0168-9525(15)00063-3/sbref1405">[7]</a></td>
-    <td>Interaction of whole genome mediated by protein</td>
+    <td>Horizontal heatmap (1D)</td>
+    <td>Represents interactions or scores as a heatmap along one axis</td>
+    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
+    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    </tr>
+    <tr>
+    <td>Horizontal rectangle domains (1D)</td>
+    <td>Displays genomic regions as rectangles along the genome</td>
+    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
+    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    </tr>
+    <tr>
+    <td>Heatmap (2D)</td>
+    <td>Two-dimensional matrix visualization of interactions</td>
+    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
+    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    </tr>
+    <tr>
+    <td>Chromosome grid (2D)</td>
+    <td>Highlights chromosome boundaries in grid form</td>
     <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
     <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
     </tr>
