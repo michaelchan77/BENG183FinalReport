@@ -104,13 +104,13 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td><img src="higlass_bartrack.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
-    <td>Horizontal heatmap (1D)</td>
+    <td>Horizontal heatmap (2D)</td>
     <td>Represents interactions or scores as a heatmap along one axis</td>
     <td><ul><li>Showing continuous data, such as methylation levels or histone modifications</li><li>Visualizing genome-wide scores, like conservation or mutation rates</li></ul></td>
     <td><img src="higlass_horizontalheatmap.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
-    <td>Horizontal rectangle domains (1D)</td>
+    <td>Horizontal rectangle domains (2D)</td>
     <td>Displays genomic regions as rectangles along the genome</td>
     <td><ul><li>Displaying topologically associating domains (TADs) or chromatin loops</li><li>Annotating large-scale structural features in the genome</li></ul></td>
     <td><img src="higlass_horizontalrectangledomains.png" alt="Centered Image" width = 400></td>
