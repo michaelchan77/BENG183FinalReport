@@ -104,6 +104,12 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td><img src="higlass_bartrack.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
+    <td>Heatmap (2D)</td>
+    <td>Two-dimensional matrix visualization of interactions</td>
+    <td><ul><li>Visualizing genome-wide interaction maps (ex: Hi-C)</li><li>Representing pairwise similarity or contact frequencies between loci</li></ul></td>
+    <td><img src="higlass_heatmap.png" alt="Centered Image" width = 400></td>
+    </tr>
+    <tr>
     <td>Horizontal heatmap (2D)</td>
     <td>Represents interactions or scores as a heatmap along one axis</td>
     <td><ul><li>Showing continuous data, such as methylation levels or histone modifications</li><li>Visualizing genome-wide scores, like conservation or mutation rates</li></ul></td>
@@ -114,12 +120,6 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td>Displays genomic regions as rectangles along the genome</td>
     <td><ul><li>Displaying topologically associating domains (TADs) or chromatin loops</li><li>Annotating large-scale structural features in the genome</li></ul></td>
     <td><img src="higlass_horizontalrectangledomains.png" alt="Centered Image" width = 400></td>
-    </tr>
-    <tr>
-    <td>Heatmap (2D)</td>
-    <td>Two-dimensional matrix visualization of interactions</td>
-    <td><ul><li>Visualizing genome-wide interaction maps (ex: Hi-C)</li><li>Representing pairwise similarity or contact frequencies between loci</li></ul></td>
-    <td><img src="higlass_heatmap.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Chromosome grid (2D)</td>
