@@ -83,7 +83,7 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
         <td>Bed-like (1D)</td>
         <td>Displays genomic features as horizontal bars or boxes</td>
         <td><ul><li>Visualizing ChIP-seq data or enriched regions</li><li>Highlighting structural variants or genomic intervals</li><li>Displaying annotations like enhancers or regulatory regions</li></ul></td>
-        <td>insert pic</td>
+        <td><img src="higlass_bedlike.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Gene annotations (1D)</td>
@@ -101,7 +101,7 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td>Line/Point/Bar (1D)</td>
     <td>Visualizes numerical data</td>
     <td><ul><li>Viewing SNP densities, expression levels, or epigenetic modifications</li><li>Visualizing quantitative signals from genomic experiments (ex: ATAC-seq, RNA-seq)</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_bartrack.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Horizontal heatmap (1D)</td>
@@ -119,7 +119,7 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td>Heatmap (2D)</td>
     <td>Two-dimensional matrix visualization of interactions</td>
     <td><ul><li>Visualizing genome-wide interaction maps (ex: Hi-C)</li><li>Representing pairwise similarity or contact frequencies between loci</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_heatmap.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Chromosome grid (2D)</td>
