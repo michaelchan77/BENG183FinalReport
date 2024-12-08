@@ -152,7 +152,7 @@ Samtools (optional) <br>
 
 1. Complete respective analysis pipeline through genome alignment step. Obtain the .bam file for subsequent steps.
 
-2. (Optional) Convert mapped reads in .sam into .bam using Samtools.
+2. (Optional) Convert mapped reads in .sam file output into .bam file using Samtools.
 
 `samtools view -S -b input.sam > output.bam`
 
