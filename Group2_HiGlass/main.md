@@ -3,7 +3,7 @@ Group 2: Michael Chan, Kyra Fetter, Dhruv Khatri
 1. [Introduction](#1)
 2. [Overview](#2)<br>
     2.1. [Why HiGlass?](#21)<br>
-    2.2. [How HiGlass Works](#22)<br>
+    2.2. [How It Works](#22)<br>
     2.3. [Hi-C Background](#23)
 3. [Tracks and Views](#3)
 4. [Preparing Data for HiGlass](#4)<br>
@@ -23,24 +23,29 @@ HiGlass, developed in 2018 by the [HIDIVE Lab](https://hidivelab.org/) at Harvar
 ## 2. Overview<a name="2"></a>
 
 #### Why HiGlass?<a name="21"></a>
-- data visualization in the last decade has advanced significantly.
-- Specifically, the advent of Hi-C contact matrcies, which can contain over a billion cells and span many resolutions prompted the need to be able to explore these large datasets in a flexible manner at multuple scales.
+
+The growing complexity and scale of genomic datasets in recent years have led to a surge in advanced visualization tools. Libraries like D3.js and tools such as Vega and Juicebox have been widely adopted, providing researchers with accessible and effective ways to create static and interactive visualizations. However, as datasets have grown to unprecedented sizes, these methods can struggle with performance at scale due to the need to load the entire dataset into memory.
+
+The challenge is particularly evident with the advent of Hi-C contact matrices, which map spatial interactions within the genome. These matrices can contain billions of data points at multiple resolutions, pushing traditional tools beyond their limits.
+
 > Further reading on Hi-C contact matrices and the assay itself is provided in the **Hi-C Background** section.
-- examples of libraries (D3.js) and tools (vega, juicebox), 
-- these methods fall short when analyzing large datasets. 
-- inspired by online maps, higlass overcomes these issues with an interactable .
-- describe downsampling and splicing techniques in blog
-- concept of tiling and generic functions
+
+![](higlass_overview_ss.png)
+
+HiGlass is explicitly designed to tackle these issues. Inspired by online map tools like Google Maps, HiGlass seamlessly integrates zooming, panning, and synchronized views to allow the exploration of genomic data at multiple scales without sacrificing performance or responsiveness. 
+
+#### How It Works<a name="22"></a>
+HiGlass relies on sophisticated downsampling and splicing techniques to efficiently handle large-scale datasets. These methods reduce the dataset's resolution for broad-scale views while preserving high-resolution details for focused exploration.
+
+To dynamically load and render data in manageable chunks, HiGlass uses a tiling approach much like online maps load tiles of geographical data. Additionally, it leverages generic functions to enable flexible integration of custom data types and visualization modules, extending its utility beyond Hi-C matrices to other genomic and multi-dimensional data types.
+
 ![](map_tiles.png)
 
-#### How HiGlass Works<a name="22"></a>
-- remove
+> More details about these techniques can be found in the HiGlass team's blog posts.
 
 #### Hi-C Background<a name="23"></a>
 
-Hi-C is a high-throughput chromosome conformation capture (3C) assay developed initially in 2009. An *in situ* Hi-C protocol was introduced in 2014.<br> 
-
-In brief, Hi-C is performed as follows: cells are first cross-linked with formaldehyde, resulting in covalent links between segments of chromatin that are proximal in 3D space. DNA is then digested with a restriction enzyme. The 5’ ends are filled with nucleotides, one of which is biotinylated. The resulting fragments are ligated. Then, a Hi-C library is created by shearing the DNA and selecting fragments with biotin tags using streptavidin beads. The library is finally sequenced using paired-end sequencing.<br> 
+Hi-C is a high-throughput chromosome conformation capture (3C) assay developed initially in 2009. An *in situ* Hi-C protocol was introduced in 2014. In brief, Hi-C is performed as follows: cells are first cross-linked with formaldehyde, resulting in covalent links between segments of chromatin that are proximal in 3D space. DNA is then digested with a restriction enzyme. The 5’ ends are filled with nucleotides, one of which is biotinylated. The resulting fragments are ligated. Then, a Hi-C library is created by shearing the DNA and selecting fragments with biotin tags using streptavidin beads. The library is finally sequenced using paired-end sequencing.<br> 
 
 ![](hic_protocol.png)
 
