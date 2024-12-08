@@ -65,7 +65,9 @@ Dynamic viewing capabilities allow researchers to easily compare differences bet
 </p>
 Additionally, users may desire to view the same region across multiple conditions simultaneously. Linked views facilitate this by allowing the user to load in multiple datasets and create side-by-side views. As the views are linked, actions performed in one window such as moving to explore the contact map will cause the same movement in the other windows. Below, we explore the difference in structures between six different cancer cell lines.
 
-![](higlass_linkedview.png)
+<p align="center">
+<img src="higlass_linkedview.png" alt="Centered Image" width="300">
+</p>
 
 ### Tracks
 There are various 1D and 2D tracks suitable for each data type and experimental condition:
