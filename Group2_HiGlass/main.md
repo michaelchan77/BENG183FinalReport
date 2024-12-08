@@ -108,20 +108,29 @@ Python (3.x) <br>
 HiC-Pro <br>
 Bowtie2 or BWA <br>
 Cooler (Python library) <br>
+Samtools <br>
 
 #### Steps:
 
-1. Map reads in sequencing data to reference genome using Bowtie2 or BWA
+1. Map reads in sequencing data to reference genome using Bowtie2 or BWA, here we will use Bowtie
 
 `bowtie2 -x <reference_index> -1 <read1.fq> -2 <read2.fq> -S <output.sam> --very-sensitive -p <threads>`
 
-2. Convert reads into mapped pairs using HiC-Pro to generate contact matrix
+- To run Bowtie, first the reference genome needs to be indexed
+
+  `bowtie2-build reference.fasta genome_index`
+
+2. Convert .bam file output into .bam file for downstream steps using Samtools
+
+`samtools view -S -b input.sam > output.bam`
+
+3. Convert reads into mapped pairs using HiC-Pro to generate contact matrix
 
 `hic-pro -i <input_dir> -o <output_dir> -c <config_file>`
 
 - HiC-Pro config file contains specific parameters such as genome size, restriction enzyme cut sites, and paths to required tools. Click here for more information: https://github.com/nservant/HiC-Pro/blob/master/config-hicpro.txt 
 
-3. Use contact matrix output from HiC-Pro to make .cool files for HiGlass import by running Cooler
+4. Use contact matrix output from HiC-Pro to make .cool files for HiGlass import by running Cooler
 
 `cooler cload --field count bins.bed matrix.txt output.cool`
 
@@ -129,7 +138,7 @@ Cooler (Python library) <br>
 - matrix.txt: matrix file from HiC-Pro<br>
 - output.cool: name of the .cool file<br>
 
-4. Import into HiGlass
+5. Import into HiGlass
 
 ### 1D Tracks<a name="42"></a>
 For viewing annotations from ChiP-seq or RNA-seq data to supplement contact map.
