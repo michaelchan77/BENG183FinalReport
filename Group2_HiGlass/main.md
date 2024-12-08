@@ -108,7 +108,7 @@ Python (3.x) <br>
 HiC-Pro <br>
 Bowtie2 or BWA <br>
 Cooler (Python library) <br>
-Samtools <br>
+Samtools (Optional) <br>
 
 #### Steps:
 
@@ -120,7 +120,7 @@ Samtools <br>
 
   `bowtie2-build reference.fasta genome_index`
 
-2. Convert .sam file output into .bam file for downstream steps using Samtools
+2. (Optional) Convert .sam file output into .bam file for downstream steps using Samtools
 
 `samtools view -S -b input.sam > output.bam`
 
