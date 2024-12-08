@@ -64,7 +64,7 @@ Dynamic viewing capabilities allow researchers to easily compare differences bet
 Additionally, users may desire to view the same region across multiple conditions simultaneously. Linked views facilitate this by allowing the user to load in multiple datasets and create side-by-side views. As the views are linked, actions performed in one window such as moving to explore the contact map will cause the same movement in the other windows. Below, we explore the difference in structures between six different cancer cell lines.
 
 ### Tracks
-There are various 1D and 2D tracks suitable for all input data types listed here:
+There are various 1D and 2D tracks suitable for each data type and experimental condition:
 
 <table>
  <tbody>
@@ -72,56 +72,55 @@ There are various 1D and 2D tracks suitable for all input data types listed here
         <th>Track</td>
         <th>Description</td>
         <th>Uses</td>
-        <th>Notes</td>
+        <th>Example</td>
     </tr>
     <tr>
         <td>Bed-like (1D)</td>
         <td>Displays genomic features as horizontal bars or boxes</td>
-        <td>~1–10 kb<br></td>
-        <td><ul><li>Sequence of bait locus must be known</li><li>Easy data analysis</li><li>Low throughput</li></ul></td>
+        <td><ul><li>Visualizing ChIP-seq data or enriched regions</li><li>Highlighting structural variants or genomic intervals</li><li>Displaying annotations like enhancers or regulatory regions</li></ul></td>
+        <td>insert pic</td>
     </tr>
     <tr>
     <td>Gene annotations (1D)</td>
     <td>Shows gene labels and structures (exons, introns) and annotations along the genome</td>
-    <td>~2 kb</td>
-    <td><ul><li>Sequence of bait locus must be known</li><li>Detects novel contacts</li><li>Long-range contacts</li></ul></td>
+    <td><ul><li>Representing gene structures (ex: exons, introns)</li><li>Annotating coding and non-coding genes</li></ul></td>
+    <td>insert pic</td>
     </tr>
     <tr>
     <td>Chromosome labels (1D)</td>
     <td>Labels chromosomes and corresponding boundaries</td>
-    <td>~1 kb</td>
-    <td><ul><li>High dynamic range</li><li>Complete contact map of a locus</li><li>3C with ligation-mediated amplification (LMA) of a ‘carbon copy’ library of oligos designed across restriction fragment junctions of interest
-3C</li></ul></td>
+    <td><ul><li>Whole-genome or multi-chromosome visualization</li></ul></td>
+    <td>insert pic</td>
     </tr>
     <tr>
     <td>Line/Point/Bar (1D)</td>
     <td>Visualizes numerical data</td>
-    <td>0.1–1 Mb</td>
-    <td><ul><li>Genome-wide nucleosome core positioning</li><li>Relative low resolution</li><li>High cost</li></ul></td>
+    <td><ul><li>Viewing SNP densities, expression levels, or epigenetic modifications</li><li>Visualizing quantitative signals from genomic experiments (ex: ATAC-seq, RNA-seq)</li></ul></td>
+    <td>insert pic</td>
     </tr>
     <tr>
     <td>Horizontal heatmap (1D)</td>
     <td>Represents interactions or scores as a heatmap along one axis</td>
-    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
-    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    <td><ul><li>Showing continuous data, such as methylation levels or histone modifications</li><li>Visualizing genome-wide scores, like conservation or mutation rates</li></ul></td>
+    <td>insert pic</td>
     </tr>
     <tr>
     <td>Horizontal rectangle domains (1D)</td>
     <td>Displays genomic regions as rectangles along the genome</td>
-    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
-    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    <td><ul><li>Displaying topologically associating domains (TADs) or chromatin loops</li><li>Annotating large-scale structural features in the genome</li></ul></td>
+    <td>insert pic</td>
     </tr>
     <tr>
     <td>Heatmap (2D)</td>
     <td>Two-dimensional matrix visualization of interactions</td>
-    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
-    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    <td><ul><li>Visualizing genome-wide interaction maps (ex: Hi-C)</li><li>Representing pairwise similarity or contact frequencies between loci</li></ul></td>
+    <td>insert pic</td>
     </tr>
     <tr>
     <td>Chromosome grid (2D)</td>
     <td>Highlights chromosome boundaries in grid form</td>
-    <td>Depends on read depth and the size of the genome region bound by the protein of interest</td>
-    <td><ul><li>Lower noise with ChIP</li><li>Biased method since selected protein</li></ul></td>
+    <td><ul><li>Visualizing inter-chromosomal contact frequencies</li><li>Identifying structural patterns, such as translocations or rearrangements</li></ul></td>
+    <td>insert pic</td>
     </tr>
  </tbody>
 </table>
