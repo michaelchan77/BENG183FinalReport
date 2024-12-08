@@ -125,7 +125,7 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td>Chromosome grid (2D)</td>
     <td>Highlights chromosome boundaries in grid form</td>
     <td><ul><li>Visualizing inter-chromosomal contact frequencies</li><li>Identifying structural patterns, such as translocations or rearrangements</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_chromosomegrid.png" alt="Centered Image" width = 400></td>
     </tr>
  </tbody>
 </table>
