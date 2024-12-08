@@ -120,7 +120,7 @@ Samtools <br>
 
   `bowtie2-build reference.fasta genome_index`
 
-2. Convert .bam file output into .bam file for downstream steps using Samtools
+2. Convert .sam file output into .bam file for downstream steps using Samtools
 
 `samtools view -S -b input.sam > output.bam`
 
