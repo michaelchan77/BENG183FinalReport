@@ -101,7 +101,7 @@ Interactions are typically represented as a contact matrix, with one axis as the
 Preparing data from Hi-C experiments or annotations from ChiP-seq and RNA-seq experiments for import into HiGlass is a straightforward process. This guide outlines the essential tools and steps required to format and import your data into HiGlass successfully. 
 
 ### 2D Tracks<a name="41"></a>
-For visualization of contact structures from Hi-C sequencing data.
+For visualization of chromatin contact structures from Hi-C sequencing data.
 
 #### Tools required: <br>
 Python (3.x) <br>
@@ -132,7 +132,7 @@ Cooler (Python library) <br>
 4. Import into HiGlass
 
 ### 1D Tracks<a name="42"></a>
-For annotations from ChiP-seq or RNA-seq data.
+For viewing annotations from ChiP-seq or RNA-seq data to supplement contact map.
 
 #### Tools required: <br>
 Python (3.x) <br>
