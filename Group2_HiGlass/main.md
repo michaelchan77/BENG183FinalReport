@@ -14,7 +14,7 @@ Group 2: Michael Chan, Kyra Fetter, Dhruv Khatri
 
 ## 1. Introduction<a name="1"></a>
 
-The past decade has seen unprecedented growth in the number of publicly available chromosome conformation capture (3C) datasets (Hi-C, HiChIP, etc.) released, in addition to corresponding 1D genomic datasets (ChIP-seq, ATAC-seq, etc.) produced due to efforts spearheaded by large consortiums like the 4D Nucleome Network and the ENCODE Project, alongside those of individual labs. This explosion in data output has prompted the need for sophisticated, seamless, and accessible data visualization tools in order to enable researchers to efficiently and effectively compare functional genomics and epigenomics datasets across multiple cell types, treatments, and conditions.<br>
+The past decade has seen unprecedented growth in the number of publicly available chromosome conformation capture (3C) datasets (Hi-C, HiChIP, etc.) released, in addition to corresponding 1D genomic datasets (ChIP-seq, ATAC-seq, etc.) produced due to efforts spearheaded by large consortiums like the 4D Nucleome Network and the ENCODE Project, alongside those of individual labs []. This explosion in data output has prompted the need for sophisticated, seamless, and accessible data visualization tools in order to enable researchers to efficiently and effectively compare functional genomics and epigenomics datasets across multiple cell types, treatments, and conditions.<br>
 
 HiGlass, developed in 2018 by the [HIDIVE Lab](https://hidivelab.org/) at Harvard Medical School, aims to address this need. HiGlass is an open source visualization tool for exploring large genomic datasets such as Hi-C contact matrices, enabling the visual interrogration of chromatin organization at multiple scales including compartments, TADs, and loops, among others, alongisde information from other high-throughput assays examining, for example, chromatin accessibility or transcription factor binding patterns.<br>
 
@@ -24,18 +24,18 @@ HiGlass, developed in 2018 by the [HIDIVE Lab](https://hidivelab.org/) at Harvar
 
 #### Why HiGlass?<a name="21"></a>
 
-The growing complexity and scale of genomic datasets in recent years have led to a surge in advanced visualization tools. Libraries like D3.js and tools such as Vega and Juicebox have been widely adopted, providing researchers with accessible and effective ways to create static and interactive visualizations. However, as datasets have grown to unprecedented sizes, these methods can struggle with performance at scale due to the need to load the entire dataset into memory.
+The growing complexity and scale of genomic datasets in recent years have led to a surge in advanced visualization tools. Libraries like D3.js and tools such as Vega and Juicebox have been widely adopted, providing researchers with accessible and effective ways to create static and interactive visualizations. However, as datasets have grown to unprecedented sizes, these methods can struggle with performance at scale due to the need to load the entire dataset into memory [7].
 
-The challenge is particularly evident with the advent of Hi-C contact matrices, which map spatial interactions within the genome. These matrices can contain billions of data points at multiple resolutions, pushing traditional tools beyond their limits.
+The challenge is particularly evident with the advent of Hi-C contact matrices, which map spatial interactions within the genome. These matrices can contain billions of data points at multiple resolutions, pushing traditional tools beyond their limits [4].
 
 > Further reading on Hi-C contact matrices and the assay itself is provided in the **Hi-C Background** section.
 
 ![](higlass_overview_ss.png)
 
-HiGlass is explicitly designed to tackle these issues. Inspired by online map tools like Google Maps, HiGlass seamlessly integrates zooming, panning, and synchronized views to allow the exploration of genomic data at multiple scales without sacrificing performance or responsiveness. 
+HiGlass is explicitly designed to tackle these issues. Inspired by online map tools like Google Maps, HiGlass seamlessly integrates zooming, panning, and synchronized views to allow the exploration of genomic data at multiple scales without sacrificing performance or responsiveness [2]. 
 
 #### How It Works<a name="22"></a>
-HiGlass relies on sophisticated downsampling and splicing techniques to efficiently handle large-scale datasets. These methods reduce the dataset's resolution for broad-scale views while preserving high-resolution details for focused exploration.
+HiGlass relies on sophisticated downsampling and splicing techniques to efficiently handle large-scale datasets [7]. These methods reduce the dataset's resolution for broad-scale views while preserving high-resolution details for focused exploration.
 
 To dynamically load and render data in manageable chunks, HiGlass uses a tiling approach much like online maps load tiles of geographical data. Additionally, it leverages generic functions to enable flexible integration of custom data types and visualization modules, extending its utility beyond Hi-C matrices to other genomic and multi-dimensional data types.
 
@@ -243,3 +243,5 @@ Note the differences between the WT and NIBPL knockdown contact matrices: in the
 [5] Schwarzer, W., Abdennur, N., Goloborodko, A., Pekowska, A., Fudenberg, G., Loe-Mie, Y., Fonseca, N. A., Huber, W., Haering, C. H., Mirny, L., & Spitz, F. (2017). Two independent modes of chromatin organization revealed by cohesin removal. Nature, 551(7678), 51–56. https://doi.org/10.1038/nature24281<br>
 
 [6] https://higlass.io/examples<br>
+
+[7] https://blog.higlass.io
