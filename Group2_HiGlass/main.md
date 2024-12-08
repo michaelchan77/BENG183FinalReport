@@ -59,7 +59,7 @@ Interactions are typically represented as a contact matrix, with one axis as the
 HiGlass offers extensive view and track customization to facilitate Hi-C data visualization. Researchers will select the viewing experience which best suits their experimental conditions and data attributes. 
 
 ### Views
-Dynamic viewing capabilities allow researchers to easily compare differences between different conditions or examine changes within samples. For example, a researcher may desire to zoom into select regions of the contact matrix and make comparisons. This is feasible through customizing a view which maintains the current state of the heatmap, but also displays the zoomed regions in separate matrices (shown below). This is in contrast with other methods which would require zooming in the same matrix window and screenshotting to make comparisons. Here, we have three zoomed in views showing telomere clustering, while one provides the original view.
+Dynamic viewing capabilities allow researchers to easily compare differences between different conditions or examine changes within samples. For example, a researcher may desire to zoom into select regions of the contact matrix and make comparisons. This is feasible through customizing a view which maintains the current state of the heatmap, but also displays the zoomed regions in separate matrices. This is in contrast with other methods which would require zooming in the same matrix window and screenshotting to make comparisons. An example is shown below with three zoomed in windows showing telomere clustering, while one window provides the original view.
 <p align="center">
 <img src="higlass_zoomedview.png" alt="Centered Image" width = 400>
 </p>
@@ -107,13 +107,13 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td>Horizontal heatmap (1D)</td>
     <td>Represents interactions or scores as a heatmap along one axis</td>
     <td><ul><li>Showing continuous data, such as methylation levels or histone modifications</li><li>Visualizing genome-wide scores, like conservation or mutation rates</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_horizontalheatmap.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Horizontal rectangle domains (1D)</td>
     <td>Displays genomic regions as rectangles along the genome</td>
     <td><ul><li>Displaying topologically associating domains (TADs) or chromatin loops</li><li>Annotating large-scale structural features in the genome</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_horizontalrectangledomains.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Heatmap (2D)</td>
@@ -149,7 +149,7 @@ Samtools (Optional) <br>
 
 `bowtie2 -x <reference_index> -1 <read1.fq> -2 <read2.fq> -S <output.sam> --very-sensitive -p <threads>`
 
-- To run Bowtie, first the reference genome needs to be indexed
+- To run Bowtie, the reference genome needs to be indexed
 
   `bowtie2-build reference.fasta genome_index`
 
