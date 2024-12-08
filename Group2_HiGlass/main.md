@@ -89,13 +89,13 @@ There are various 1D and 2D tracks suitable for each data type and experimental 
     <td>Gene annotations (1D)</td>
     <td>Shows gene labels and structures (exons, introns) and annotations along the genome</td>
     <td><ul><li>Representing gene structures (ex: exons, introns)</li><li>Annotating coding and non-coding genes</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_geneannotations.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Chromosome labels (1D)</td>
     <td>Labels chromosomes and corresponding boundaries</td>
     <td><ul><li>Whole-genome or multi-chromosome visualization</li></ul></td>
-    <td>insert pic</td>
+    <td><img src="higlass_chromosomelabels.png" alt="Centered Image" width = 400></td>
     </tr>
     <tr>
     <td>Line/Point/Bar (1D)</td>
