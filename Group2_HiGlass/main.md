@@ -98,11 +98,61 @@ Interactions are typically represented as a contact matrix, with one axis as the
 </table>
 
 ## 4. Preparing Data for HiGlass<a name="4"></a>
-- data preparation blurb
-#### 2D Tracks<a name="41"></a>
-- hi
-#### 1D Tracks<a name="42"></a>
-- hi again
+Preparing data from Hi-C experiments or annotations from ChiP-seq and RNA-seq experiments for import into HiGlass is a straightforward process. This guide outlines the essential tools and steps required to format and import your data into HiGlass successfully. 
+
+### 2D Tracks<a name="41"></a>
+For visualization of contact structures from Hi-C sequencing data.
+
+#### Tools required: <br>
+Python (3.x) <br>
+HiC-Pro <br>
+Bowtie2 or BWA <br>
+Cooler (Python library) <br>
+
+#### Steps:
+
+1. Map reads in sequencing data to reference genome using Bowtie2 or BWA
+
+`bowtie2 -x <reference_index> -1 <read1.fq> -2 <read2.fq> -S <output.sam> --very-sensitive -p <threads>`
+
+2. Convert reads into mapped pairs using HiC-Pro to generate contact matrix
+
+`hic-pro -i <input_dir> -o <output_dir> -c <config_file>`
+
+- HiC-Pro config file contains specific parameters such as genome size, restriction enzyme cut sites, and paths to required tools. Click here for more information: https://github.com/nservant/HiC-Pro/blob/master/config-hicpro.txt 
+
+3. Use contact matrix output from HiC-Pro to make .cool files for HiGlass import by running Cooler
+
+`cooler cload --field count bins.bed matrix.txt output.cool`
+
+- bins.bed: BED file defining genomic bins from HiC-Pro<br>
+- matrix.txt: matrix file from HiC-Pro<br>
+- output.cool: name of the .cool file<br>
+
+4. Import into HiGlass
+
+### 1D Tracks<a name="42"></a>
+For annotations from ChiP-seq or RNA-seq data.
+
+#### Tools required: <br>
+Python (3.x) <br>
+Bedtools <br>
+Samtools (optional) <br>
+
+#### Steps:
+
+1. Complete respective analysis pipeline through genome alignment step. Obtain the .bam file for subsequent steps.
+
+2. (Optional) Convert mapped reads in .sam into .bam using Samtools.
+
+`samtools view -S -b input.sam > output.bam`
+
+3. Use Bedtools to convert .bam file to .bedgraph file.
+
+`bedtools genomecov -ibam input.bam -bg > output.bedgraph`
+
+4. Import into HiGlass
+
 
 ## 5. HiGlass in Action: Case Study<a name="5"></a>
 
