@@ -60,11 +60,11 @@ Interactions are typically represented as a contact matrix, with one axis as the
 HiGlass offers extensive view and track options to facilitate Hi-C data visualization, allowing researchers to customize their viewing experience based on their experimental conditions and data attributes.
 
 ### Views
-Dynamic viewing capabilities allow for the efficient comparison of different conditions and changes within samples. For example, a researcher may desire to zoom into select regions of the contact matrix and make comparisons. This is readily achievable by creating multiple views which maintain the current state of the heatmap while also displaying the zoomed regions as separate matrices. Other methods often require zooming in the same matrix window and screenshotting to make comparisons, which is supoptimal. An example is shown below with three zoomed in windows showing telomere clustering, while one window provides the original view [6]:
+Dynamic viewing capabilities allow for the efficient comparison of different conditions and changes within samples. For example, a researcher may desire to zoom into select regions of the contact matrix and make comparisons. This is readily achievable by creating multiple views which maintain the current state of the heatmap while also displaying the zoomed regions as separate matrices. Other methods often require zooming in the same matrix window and screenshotting to make comparisons, which is supoptimal. An example is shown below with three zoomed in windows showing telomere clustering, while one window provides the original view [6]:<br>
 <p align="center">
 <img src="higlass_zoomedview.png" alt="Centered Image" width = 400>
 </p>
-Additionally, users may desire to view the same region across multiple conditions simultaneously. Linked views facilitate this by allowing the user to load in multiple datasets and create side-by-side views. As the views are linked, actions performed in one window such as moving to explore the contact map will induce the same movement in the other windows. The example below makes use of linked views to explore structural differences between six different cancer cell lines [6]:
+Additionally, users may desire to view the same region across multiple conditions simultaneously. Linked views facilitate this by allowing the user to load in multiple datasets and create side-by-side views. As the views are linked, actions performed in one window such as moving to explore the contact map will induce the same movement in the other windows. The example below makes use of linked views to explore structural differences between six different cancer cell lines [6]:<br>
 <p align="center">
 <img src="higlass_linkedview.png" alt="Centered Image" width = 600>
 </p>
